@@ -48,6 +48,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/topicos").permitAll()
                 .antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/auth").permitAll()
+                .antMatchers(HttpMethod.POST, "/actuator").permitAll()
                 .anyRequest().authenticated()
 //                .and().formLogin(); (forma stateless = vai armazenar cada usuário na memória)
                 .and().csrf().disable()
